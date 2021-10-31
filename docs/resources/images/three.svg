@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 98" width="130px" version="1.1" height="98px">
+	<g transform="matrix(1.0,0.0,0.0,1.0,0.5,0.5)">
+		<rect x="2.0" width="10.0" y="34.0" fill="#ff0000" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="12.0" width="10.0" y="34.0" fill="#00ff00" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="22.0" width="10.0" y="34.0" fill="#00ff00" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="2.0" width="10.0" y="44.0" fill="#00ff00" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="12.0" width="10.0" y="44.0" fill="#ff8000" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="22.0" width="10.0" y="44.0" fill="#0000ff" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="2.0" width="10.0" y="54.0" fill="#ff0000" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="12.0" width="10.0" y="54.0" fill="#ff0000" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="22.0" width="10.0" y="54.0" fill="#ff0000" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="34.0" width="10.0" y="66.0" fill="#0000ff" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="44.0" width="10.0" y="66.0" fill="#ffff00" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="54.0" width="10.0" y="66.0" fill="#ffff00" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="34.0" width="10.0" y="76.0" fill="#00ff00" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="44.0" width="10.0" y="76.0" fill="#ffff00" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="54.0" width="10.0" y="76.0" fill="#0000ff" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="34.0" width="10.0" y="86.0" fill="#00ff00" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="44.0" width="10.0" y="86.0" fill="#0000ff" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="54.0" width="10.0" y="86.0" fill="#ffffff" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="98.0" width="10.0" y="34.0" fill="#ff0000" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="108.0" width="10.0" y="34.0" fill="#00ff00" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="118.0" width="10.0" y="34.0" fill="#ffff00" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="98.0" width="10.0" y="44.0" fill="#ff0000" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="108.0" width="10.0" y="44.0" fill="#0000ff" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="118.0" width="10.0" y="44.0" fill="#ff8000" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="98.0" width="10.0" y="54.0" fill="#ff8000" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="108.0" width="10.0" y="54.0" fill="#ffffff" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="118.0" width="10.0" y="54.0" fill="#ffffff" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="66.0" width="10.0" y="34.0" fill="#ffffff" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="76.0" width="10.0" y="34.0" fill="#0000ff" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="86.0" width="10.0" y="34.0" fill="#0000ff" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="66.0" width="10.0" y="44.0" fill="#ff0000" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="76.0" width="10.0" y="44.0" fill="#ff0000" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="86.0" width="10.0" y="44.0" fill="#ffff00" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="66.0" width="10.0" y="54.0" fill="#ff8000" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="76.0" width="10.0" y="54.0" fill="#ff8000" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="86.0" width="10.0" y="54.0" fill="#00ff00" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="34.0" width="10.0" y="2.0" fill="#00ff00" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="44.0" width="10.0" y="2.0" fill="#ffffff" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="54.0" width="10.0" y="2.0" fill="#ffff00" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="34.0" width="10.0" y="12.0" fill="#ffff00" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="44.0" width="10.0" y="12.0" fill="#ffffff" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="54.0" width="10.0" y="12.0" fill="#ffff00" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="34.0" width="10.0" y="22.0" fill="#ffff00" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="44.0" width="10.0" y="22.0" fill="#ffffff" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="54.0" width="10.0" y="22.0" fill="#0000ff" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="34.0" width="10.0" y="34.0" fill="#ff8000" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="44.0" width="10.0" y="34.0" fill="#ff8000" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="54.0" width="10.0" y="34.0" fill="#ff8000" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="34.0" width="10.0" y="44.0" fill="#ff0000" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="44.0" width="10.0" y="44.0" fill="#00ff00" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="54.0" width="10.0" y="44.0" fill="#ffffff" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="34.0" width="10.0" y="54.0" fill="#ffffff" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="44.0" width="10.0" y="54.0" fill="#ff8000" stroke="#000000" height="10.0">
+		</rect>
+		<rect x="54.0" width="10.0" y="54.0" fill="#0000ff" stroke="#000000" height="10.0">
+		</rect>
+	</g>
+</svg>
