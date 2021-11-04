@@ -7,6 +7,9 @@ plugins {
 
     // Apply the application plugin to add support for building a CLI application.
     id 'application'
+
+    // Bundle a JRE with the distribution
+    id 'org.beryx.runtime' version '1.12.7'
 }
 
 repositories {
@@ -38,4 +41,35 @@ version = '1.0.0'
 application {
     // Define the main class for the application.
     mainClassName = 'tnoodlecli.App'
+    applicationName = 'tnoodle'
+}
+
+task copyShadowJar(type: Copy) {
+    from ("$buildDir/libs/tnoodle-cli-$version-all.jar") {
+        rename '(.*)-all(.jar)', '$1$2'
+    }
+    into "$buildDir/releases/"
+}
+
+tasks.named("shadowJar") {
+    finalizedBy copyShadowJar
+}
+
+// See the docs here: https://badass-runtime-plugin.beryx.org/releases/latest/
+runtime {
+    options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
+    imageDir = file("$buildDir/tnoodle-cli")
+    imageZip = file("$buildDir/releases/tnoodle-cli-$version" + ".zip")
+
+    targetPlatform("win_x64") {
+        jdkHome = jdkDownload("https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.11%2B9_openj9-0.26.0/OpenJDK11U-jdk_x64_windows_openj9_11.0.11_9_openj9-0.26.0.zip")
+    }
+
+    targetPlatform("linux_x64") {
+        jdkHome = jdkDownload("https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.11%2B9_openj9-0.26.0/OpenJDK11U-jdk_x64_linux_openj9_11.0.11_9_openj9-0.26.0.tar.gz")
+    }
+
+    targetPlatform("mac_x64") {
+        jdkHome = jdkDownload("https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.11%2B9_openj9-0.26.0/OpenJDK11U-jdk_x64_mac_openj9_11.0.11_9_openj9-0.26.0.tar.gz")
+    }
 }
