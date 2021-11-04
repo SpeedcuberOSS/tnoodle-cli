@@ -1,0 +1,31 @@
+name: CI/CD for TNoodle CLI
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install Java
+        id: jdk
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+      - name: Build
+        run: |
+          chmod +x gradlew
+          ./gradlew test
+          ./gradlew runtimeZip
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: build/releases/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: jhale1805/tnoodle-cli
