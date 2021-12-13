@@ -1,5 +1,5 @@
 # TNoodle CLI
-Generate WCA scrambles on the command line!
+Generate WCA scrambles for the Rubik's Cube and other twisty puzzles on the command line!
 
 **What?**
 
