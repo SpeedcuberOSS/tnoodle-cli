@@ -28,4 +28,4 @@ jobs:
           files: build/releases/*
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REPOSITORY: jhale1805/tnoodle-cli
+          GITHUB_REPOSITORY: SpeedcuberOSS/tnoodle-cli
