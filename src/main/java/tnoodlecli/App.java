@@ -82,7 +82,7 @@ public class App {
         validateArgs(jc, args);
         
         if (app.version) {
-            System.out.println("tnoodle-cli version 1.0.0");
+            System.out.println("tnoodle-cli version 1.1.1");
         } else {
             executeCommand(jc);
         }
