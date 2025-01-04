@@ -23,7 +23,7 @@ dependencies {
     implementation 'com.google.guava:guava:29.0-jre'
     
     // https://mvnrepository.com/artifact/org.worldcubeassociation.tnoodle/lib-scrambles
-    implementation 'org.worldcubeassociation.tnoodle:lib-scrambles:0.18.0'
+    implementation 'org.worldcubeassociation.tnoodle:lib-scrambles:0.19.2'
 
     // JCommander parses CLI args
     // https://mvnrepository.com/artifact/com.beust/jcommander
@@ -36,7 +36,7 @@ dependencies {
     testImplementation 'junit:junit:4.13'
 }
 
-version = '1.0.0'
+version = '1.1.0'
 
 application {
     // Define the main class for the application.
