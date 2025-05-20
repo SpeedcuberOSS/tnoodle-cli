@@ -19,7 +19,9 @@ package tnoodlecli.commands;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Scanner;
 
 import com.beust.jcommander.Parameter;
 import com.beust.jcommander.Parameters;
@@ -47,7 +49,7 @@ public class DrawCommand implements Runnable {
     @Parameter(
         names = { "-s", "--scramble" },
         description = "The scramble to draw.",
-        required = true
+        required = false
     )
     private String scramble;
 
@@ -56,6 +58,40 @@ public class DrawCommand implements Runnable {
 
     public void run() {
         try {
+            if (scramble == null || scramble.isEmpty()) {
+                try {
+                    if (System.in.available() > 0) {
+                        Scanner scanner = new Scanner(System.in);
+                        if (scanner.hasNextLine()) {
+                            scramble = scanner.nextLine();
+                            if (scramble.trim().isEmpty()) {
+                                System.err.println("Error: Received empty scramble from standard input.");
+                                System.exit(1);
+                            }
+                        } else {
+                            // This case means stdin had available bytes but nothing was read by nextLine (e.g. only EOF)
+                            System.err.println("Error: Standard input was open but no scramble string was provided.");
+                            System.exit(1);
+                        }
+                        // We don't close the scanner for System.in here
+                    } else {
+                        // System.in.available() <= 0 means no input from stdin when -s is not used
+                        System.err.println("Error: No scramble provided via -s/--scramble and no input detected on standard input.");
+                        System.exit(1);
+                    }
+                } catch (IOException e) {
+                    // Handle IOException from System.in.available()
+                    System.err.println("Error accessing standard input: " + e.getMessage());
+                    System.exit(1);
+                }
+            }
+
+            // This check is now more of a safeguard, as the logic above should handle most empty/null cases.
+            if (scramble == null || scramble.trim().isEmpty()) {
+                System.err.println("Error: Scramble string not provided or is empty.");
+                System.exit(1);
+            }
+
             Svg svg = PuzzleRegistry.valueOf(puzzle.toUpperCase()).getScrambler().drawScramble(scramble, null);
             if (output == null) {
                 System.out.println(svg.toString());
@@ -64,11 +100,13 @@ public class DrawCommand implements Runnable {
                 try (PrintWriter writer = new PrintWriter(outputFile)){
                     writer.print(svg.toString());
                 } catch (FileNotFoundException e) {
-                    e.printStackTrace();
+                    e.printStackTrace(); // Or a more user-friendly message + System.exit(1)
                 }
             }
         } catch (InvalidScrambleException e1) {
-            e1.printStackTrace();
+            System.err.println("Error: Invalid scramble string: " + e1.getMessage());
+            // e1.printStackTrace(); // Optionally print stack trace for more detail
+            System.exit(1);
         } 
     }
 }
